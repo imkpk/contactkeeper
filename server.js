@@ -1,6 +1,10 @@
 const express = require("express");
+//bring the db file by connectDB
+const connectDB=require('./config/db')
 
 const app = express();
+//connect database 
+connectDB();
 
 app.get("/", (req, res) => res.json({ msg: "welcome to contackt kpper API..." }));
 
