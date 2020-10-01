@@ -30,7 +30,7 @@ router.post(
     }
     // res.send("passed..");
     const { name, email, password } = req.body;
-    
+
     try {
       let user = await User.findOne({ email });
 
@@ -70,7 +70,7 @@ router.post(
       );
     } catch (err) {
       console.error(err.message);
-      res.status(500).send("server auth error");
+      res.status(500).send("user server  error");
     }
   }
 );
