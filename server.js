@@ -1,15 +1,20 @@
 const express = require("express");
 //bring the db file by connectDB
-const connectDB=require('./config/db')
+const connectDB = require("./config/db");
 
 const app = express();
-//connect database 
+//connect database
 connectDB();
 
-app.get("/", (req, res) => res.json({ msg: "welcome to contackt kpper API..." }));
+//inint Middleware
+app.use(express.json({ extended: false }));
+
+app.get("/", (req, res) =>
+  res.json({ msg: "welcome to contackt kpper API..." })
+);
 
 //define Routes
-app.use("/api/users", require("./routes/users")); 
+app.use("/api/users", require("./routes/users"));
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/contacts", require("./routes/contacts"));
 
