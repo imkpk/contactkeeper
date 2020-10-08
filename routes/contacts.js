@@ -52,8 +52,8 @@ router.post(
       const contact = await newContact.save();
       res.json(contact);
     } catch (er) {
-      console.error(er.message)
-      res.status(500).send('Contact data server error')
+      console.error(er.message);
+      res.status(500).send("Contact data server error");
     }
   }
 );
