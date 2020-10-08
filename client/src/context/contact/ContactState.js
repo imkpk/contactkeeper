@@ -83,7 +83,8 @@ const ContactState = (props) => {
         setCurrent,
         updateContact,
         filterContacts,
-        clearFilter
+        clearFilter,
+        clearCurrent
       }}>
       {props.childern}
     </ContactContext.Provider>

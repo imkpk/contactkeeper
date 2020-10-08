@@ -25,8 +25,7 @@ const ContactForm = () => {
         type: "personal"
       });
     }
-    // return () => {};
-  }, [contactContext]);
+  }, [current, contactContext]);
 
   const { name, email, phone, type } = contact;
   const onChange = (e) => {

@@ -15,7 +15,7 @@ const ContactFilter = () => {
     if (filtered === null) {
       text.current.value = "";
     }
-  }, []);
+  }, [filtered]);
 
   //onchnge value
   const onChange = (e) => {
